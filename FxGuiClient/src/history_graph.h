@@ -1,6 +1,7 @@
 /*
- * FxGraph.h
+ * history_graph.h
  *
+ *  Description: Draw history graph
  *  Created on: Nov 4, 2012
  *      Author: nirin
  */

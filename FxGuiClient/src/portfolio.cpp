@@ -1,6 +1,7 @@
 /*
- * FxPortfolio.cpp
+ * portfolio.cpp
  *
+ *  Description: Render portfolio section
  *  Created on: Nov 11, 2012
  *      Author: nirin
  */
@@ -40,18 +41,6 @@ Portfolio::Portfolio()
 	  m_VBox.pack_start(m_ScrolledWindow);
 	  m_refTreeModel = Gtk::ListStore::create(m_Columns);
 	  m_TreeView.set_model(m_refTreeModel);
-
-	  //Add the TreeView's view columns:
-	  //m_TreeView.append_column("Currency", m_Columns.m_col_currency);
-	  //m_TreeView.append_column("Amount", m_Columns.m_col_amount);
-	  //m_TreeView.append_column_numeric("Amount", m_Columns.m_col_amount,
-	  //        "%010d" /* 10 digits, using leading zeroes. */);
-	  //Display a progress bar instead of a decimal number:
-	  //Gtk::CellRendererProgress* cell = Gtk::manage(new Gtk::CellRendererProgress);
-
-	  //cout << cols_count << endl;
-	  //Gtk::CellRendererProgress* cell = Gtk::manage(new Gtk::CellRendererProgress);
-	  //int cols_count = m_TreeView.append_column("Percentage", *cell);
 
 	  reflesh();
 }
@@ -104,10 +93,6 @@ void Portfolio::reflesh()
 	    pColumn->add_attribute(cell->property_value(), m_Columns.m_col_percentage);
 	  }
 
-	  //Make all the columns reorderable:
-	  //This is not necessary, but it's nice to show the feature.
-	  //You can use TreeView::set_column_drag_function() to more
-	  //finely control column drag and drop.
 	  for(guint i = 0; i < 2; i++)
 	  {
 	    Gtk::TreeView::Column* pColumn = m_TreeView.get_column(i);

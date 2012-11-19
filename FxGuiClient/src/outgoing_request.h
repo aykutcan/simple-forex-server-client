@@ -1,6 +1,7 @@
 /*
- * FxRequest.h
+ * outgoing_request.h
  *
+ *  Description: Process and send request to server program
  *  Created on: Nov 10, 2012
  *      Author: nirin
  */

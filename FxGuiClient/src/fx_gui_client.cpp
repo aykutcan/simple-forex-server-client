@@ -1,10 +1,10 @@
-//============================================================================
-// Name        : FxGuiClient.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+/*
+ * fx_gui_client.h
+ *
+ *  Description: Main program
+ *  Created on: Nov 3, 2012
+ *      Author: nirin
+ */
 
 #include "fx_client_window.h"
 #include <gtkmm/main.h>

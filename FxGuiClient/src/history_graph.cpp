@@ -1,6 +1,7 @@
 /*
- * FxGraph.cpp
+ * history_graph.cpp
  *
+ *  Description: Draw history graph
  *  Created on: Nov 4, 2012
  *      Author: nirin
  */

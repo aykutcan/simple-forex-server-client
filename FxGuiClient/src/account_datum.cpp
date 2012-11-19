@@ -1,6 +1,7 @@
 /*
- * FxAccountDatum.cpp
+ * account_datum.cpp
  *
+ *  Description: Data structure for account data
  *  Created on: Nov 11, 2012
  *      Author: nirin
  */

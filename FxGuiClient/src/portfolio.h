@@ -1,6 +1,7 @@
 /*
- * Portfolio.h
+ * portfolio.h
  *
+ *  Description: Render portfolio section
  *  Created on: Nov 11, 2012
  *      Author: nirin
  */

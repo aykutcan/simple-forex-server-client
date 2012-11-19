@@ -1,6 +1,7 @@
 /*
  * FxIndicator.cpp
  *
+ *  Description: Base indicator class, all indicators will derived from this class
  *  Created on: Nov 12, 2012
  *      Author: nirin
  */

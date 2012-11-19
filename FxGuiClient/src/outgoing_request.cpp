@@ -1,6 +1,7 @@
 /*
- * FxRequest.cpp
+ * outgoint_request.cpp
  *
+ *  Description: Process and send request to server program
  *  Created on: Nov 10, 2012
  *      Author: nirin
  */
@@ -37,7 +38,7 @@ OutgoingRequest::~OutgoingRequest() {
 string OutgoingRequest::requestByCommandLine(string cmd){
 
 	property_tree::ptree pt;
-	property_tree::ini_parser::read_ini("/home/nirin/workspace/FxGuiClient/src/config.ini", pt);
+	property_tree::ini_parser::read_ini("/home/nirin/git/simple_forex/FxGuiClient/src/config.ini", pt);
 	const int buffer_length = 1024*1024;//(const int)(pt.get<string>("connection.buffer_length"));
 	string server = pt.get<string>("connection.server");
 	string port = pt.get<string>("connection.port");

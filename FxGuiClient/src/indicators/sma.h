@@ -1,6 +1,7 @@
 /*
  * SMA.h
  *
+ *	Description: Smooth Moving Average
  *  Created on: Nov 14, 2012
  *      Author: nirin
  */

@@ -1,6 +1,7 @@
 /*
  * FxIndicatorFactory.h
  *
+ *  Description: Factory class to create indicators
  *  Created on: Nov 14, 2012
  *      Author: nirin
  */

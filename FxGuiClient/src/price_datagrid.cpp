@@ -1,6 +1,7 @@
 /*
- * FxDataGrid.cpp
+ * price_datagrid.cpp
  *
+ *  Description: Render price data grid; latest, change, bid, ask
  *  Created on: Nov 6, 2012
  *      Author: nirin
  */

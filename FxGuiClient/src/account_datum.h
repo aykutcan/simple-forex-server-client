@@ -1,6 +1,7 @@
 /*
- * FxAccountDatum.h
+ * account_datum.h
  *
+ *  Description: Data structure for account data
  *  Created on: Nov 11, 2012
  *      Author: nirin
  */

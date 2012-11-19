@@ -1,6 +1,7 @@
 /*
- * FxClientWindow.cpp
+ * fx_client_window.cpp
  *
+ *  Description: Assemble gui widgets in main window
  *  Created on: Nov 3, 2012
  *      Author: nirin
  */

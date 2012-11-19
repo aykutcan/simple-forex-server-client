@@ -1,6 +1,7 @@
 /*
- * FxClientWindow.h
+ * fx_client_window.h
  *
+ *  Description: Assemble gui widgets in main window
  *  Created on: Nov 3, 2012
  *      Author: nirin
  */

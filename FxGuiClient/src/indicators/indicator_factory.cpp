@@ -1,6 +1,7 @@
 /*
- * FxIndicatorFactory.cpp
+ * indicator_factory.cpp
  *
+ *  Description: Factory class to create indicators
  *  Created on: Nov 14, 2012
  *      Author: nirin
  */
@@ -25,5 +26,5 @@ BaseIndicator* IndicatorFactory::createIndicator(string str){
 		cout << "here here here" << endl;
 		return new SMA();
 	}
-	else return new SMA();
+	else return new BaseIndicator();
 }
