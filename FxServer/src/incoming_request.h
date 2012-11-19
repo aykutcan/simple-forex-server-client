@@ -1,6 +1,7 @@
 /*
- * IncomingRequest.h
+ * incoming_request.h
  *
+ *  Description: Interpret incoming request
  *  Created on: Oct 25, 2012
  *      Author: nirin
  */

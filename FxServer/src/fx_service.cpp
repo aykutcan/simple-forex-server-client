@@ -1,6 +1,7 @@
 /*
- * FxService.cpp
+ * fx_service.cpp
  *
+ *  Description: Operate incoming request
  *  Created on: Oct 28, 2012
  *      Author: nirin
  */

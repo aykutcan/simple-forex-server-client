@@ -1,6 +1,7 @@
 /*
- * FxService.h
+ * fx_service.h
  *
+ *  Description: Operate incoming request
  *  Created on: Oct 28, 2012
  *      Author: nirin
  */

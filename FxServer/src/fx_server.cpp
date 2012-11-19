@@ -1,12 +1,17 @@
-//
-// blocking_tcp_echo_server.cpp
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-// Copyright (c) 2003-2011 Christopher M. Kohlhoff (chris at kohlhoff dot com)
-//
-// Distributed under the Boost Software License, Version 1.0. (See accompanying
-// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
-//
+/*
+ * fx_server.cpp
+ *
+ *  Description: Main fx server program
+ *  Created on: Oct 23, 2012
+ *      Author: nirin
+ *
+ *  Modified from the following file
+ *  	blocking_tcp_echo_server.cpp
+ *  	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * 		Copyright (c) 2003-2011 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+ * 		Distributed under the Boost Software License, Version 1.0. (See accompanying
+ * 		file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+ */
 
 #include <cstdlib>
 #include <iostream>

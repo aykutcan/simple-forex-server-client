@@ -1,6 +1,7 @@
 /*
- * IncomingRequest.cpp
+ * incoming_request.cpp
  *
+ *  Description: Interpret incoming request
  *  Created on: Oct 25, 2012
  *      Author: nirin
  */
