@@ -1,3 +1,6 @@
+// Console version of fx client program
+// Author Nirin Suarod
+// Modified from the following file
 //
 // blocking_tcp_echo_client.cpp
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
