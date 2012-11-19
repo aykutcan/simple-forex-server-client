@@ -12,7 +12,6 @@
 
 IndicatorFactory::IndicatorFactory() {
 	// TODO Auto-generated constructor stub
-
 }
 
 IndicatorFactory::~IndicatorFactory() {
@@ -20,11 +19,9 @@ IndicatorFactory::~IndicatorFactory() {
 }
 
 BaseIndicator* IndicatorFactory::createIndicator(string str){
-	cout << "str : " << str << endl;
-	cout << str.size() << endl;
 	if(str == "SMA"){
-		cout << "here here here" << endl;
 		return new SMA();
 	}
-	else return new BaseIndicator();
+	else
+		return new BaseIndicator();
 }

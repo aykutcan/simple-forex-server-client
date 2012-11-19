@@ -8,25 +8,14 @@
 
 #include "fx_client_window.h"
 #include "outgoing_request.h"
+#include <iostream>
+#include <vector>
 #include <gtkmm.h>
 #include <glib.h>
 #include <sigc++.h>
 #include <signal.h>
-#include <iostream>
-#include <cstdlib>
-#include <cstring>
-#include <iostream>
-#include <boost/asio.hpp>
-#include <boost/format.hpp>
-#include <boost/lexical_cast.hpp>
-#include <boost/date_time/gregorian/gregorian.hpp>
-#include "boost/date_time/posix_time/posix_time.hpp"
-#include <vector>
 
 using namespace std;
-using namespace boost;
-using boost::asio::ip::tcp;
-using namespace boost::posix_time;
 
 FxClientWindow::FxClientWindow()
 : m_Table(24, 16, true),
@@ -59,10 +48,6 @@ FxClientWindow::FxClientWindow()
 
   left_Table.attach(graph_ctrl_Table, 0, 8, 0, 8);
   left_Table.attach(graph_Table, 0, 8, 8, 20);
-
-  //Gtk::Calendar cal;
-  //cal.set_visible(true);
-  //right_Table.attach(cal, 0, 8, 0, 8);
 
   right_Table.attach(portfolio_Table, 0, 8, 0, 8);
   right_Table.attach(order_Table, 0, 8, 8, 12);
@@ -131,10 +116,6 @@ FxClientWindow::FxClientWindow()
   one_month_Button.set_label("1 month");
   three_months_Button.set_label("3 months");
   one_year_Button.set_label("1 year");
-
-
-
-
 
   submit_Button.signal_clicked().connect(sigc::mem_fun(*this,
 		  &FxClientWindow::on_command_submitted));

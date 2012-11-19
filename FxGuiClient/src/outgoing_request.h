@@ -6,17 +6,12 @@
  *      Author: nirin
  */
 
-#ifndef FXREQUEST_H_
-#define FXREQUEST_H_
+#ifndef Outgoing_Request_H_
+#define Outgoing_Request_H_
 
-//#define FX_SERVER "localhost"
-//#define PORT "8090"
-
-#include <iostream>
 #include "account_datum.h"
+#include <iostream>
 #include <vector>
-
-//const int max_length = 1024*1024;
 
 using namespace std;
 class OutgoingRequest {
@@ -39,4 +34,4 @@ public:
 	static vector<AccountDatum*> deserializeAccountData(string str);
 };
 
-#endif /* FXREQUEST_H_ */
+#endif /* Outgoing_Request_H_ */

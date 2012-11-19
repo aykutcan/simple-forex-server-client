@@ -6,8 +6,8 @@
  *      Author: nirin
  */
 
-#ifndef INDICATORFACTORY_H_
-#define INDICATORFACTORY_H_
+#ifndef Indicator_Factory_H_
+#define Indicator_Factory_H_
 
 #include "base_indicator.h"
 
@@ -19,4 +19,4 @@ public:
 	static BaseIndicator* createIndicator(string str);
 };
 
-#endif /* INDICATORFACTORY_H_ */
+#endif /* Indicator_Factory_H_ */

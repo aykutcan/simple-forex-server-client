@@ -6,8 +6,8 @@
  *      Author: nirin
  */
 
-#ifndef FXDATAGRID_H_
-#define FXDATAGRID_H_
+#ifndef Price_Datagrid_H_
+#define Price_Datagrid_H_
 
 #include <gtkmm/drawingarea.h>
 #include <cairomm/context.h>
@@ -50,4 +50,4 @@ private:
 
 };
 
-#endif /* FXDATAGRID_H_ */
+#endif /* Price_Datagrid_H_ */

@@ -19,7 +19,6 @@
 #include <boost/property_tree/detail/ptree_utils.hpp>
 #include <boost/property_tree/detail/file_parser_error.hpp>
 
-
 using namespace std;
 using namespace boost;
 using namespace boost::algorithm;
@@ -28,7 +27,6 @@ using boost::asio::ip::tcp;
 
 OutgoingRequest::OutgoingRequest() {
 	// TODO Auto-generated constructor stub
-
 }
 
 OutgoingRequest::~OutgoingRequest() {
@@ -36,10 +34,10 @@ OutgoingRequest::~OutgoingRequest() {
 }
 
 string OutgoingRequest::requestByCommandLine(string cmd){
-
 	property_tree::ptree pt;
 	property_tree::ini_parser::read_ini("/home/nirin/git/simple_forex/FxGuiClient/src/config.ini", pt);
-	const int buffer_length = 1024*1024;//(const int)(pt.get<string>("connection.buffer_length"));
+	string temp = pt.get<string>("connection.buffer_length");
+	const int buffer_length = 1024*1024; //const_cast<int>(lexical_cast<int>(temp));
 	string server = pt.get<string>("connection.server");
 	string port = pt.get<string>("connection.port");
 
@@ -137,7 +135,6 @@ vector<AccountDatum*> OutgoingRequest::deserializeAccountData(string str){
 		boost::split(elems,strs.at(i),boost::is_any_of(","));
 		string currency = elems.at(0);
 		double amount = lexical_cast<double>(elems.at(1));
-		cout << currency << ": " << amount << endl;
 		AccountDatum* d = new AccountDatum(currency, amount);
 		data.push_back(d);
 	}
@@ -148,7 +145,6 @@ vector<AccountDatum*> OutgoingRequest::requestAccountData(){
 	vector<AccountDatum*> data;
 	string cmd = "request-account-data";
 	string reply = requestByCommandLine(cmd);
-	cout << reply << endl;
 	data = deserializeAccountData(reply);
 	return data;
 }

@@ -8,27 +8,23 @@
 
 #include "portfolio.h"
 #include "outgoing_request.h"
+#include <vector>
 #include <cstdlib>
 #include <iostream>
+#include <gtkmm.h>
+#include <gdkmm.h>
 #include <gtkmm/drawingarea.h>
 #include <cairomm/context.h>
 #include <glib.h>
 #include <cairo.h>
-#include <gtkmm.h>
-#include <gdkmm.h>
 #include <glib.h>
 #include <sigc++.h>
 #include <signal.h>
-#include <vector>
 #include <boost/bind.hpp>
 #include <boost/smart_ptr.hpp>
-#include <boost/asio.hpp>
-#include <boost/thread.hpp>
-#include <vector>
-#include <boost/format.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/algorithm/string.hpp>
-#include<boost/range/numeric.hpp>
+#include <boost/range/numeric.hpp>
 
 using namespace std;
 using namespace boost;
@@ -73,7 +69,6 @@ void Portfolio::reflesh()
 	  for(size_t i=0; i<accountData.size(); i++)
 	  {
 		  double percentage = in_yens.at(i)/sum * 100;
-		  cout << percentage << endl;
 		  percentages.push_back(percentage);
 	  }
 

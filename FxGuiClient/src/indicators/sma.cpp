@@ -14,7 +14,6 @@ using namespace std;
 
 SMA::SMA() {
 	// TODO Auto-generated constructor stub
-
 }
 
 SMA::~SMA() {
@@ -40,8 +39,6 @@ vector<pair<string,double> > SMA::calculate(vector<pair<string,double> > data){
 	}
 	while(i<data.size()){
 		sum = sum + data.at(i).second - data.at(i-kSMAPeriod).second;
-		//cout << "data i : " << data.at(i) << endl;
-		//cout << "sma : " << sum/kSMAPeriod << endl;
 		pair<string, double> pair(data.at(i).first, sum/kSMAPeriod);
 		indicator_data.push_back(pair);
 		i++;

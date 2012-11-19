@@ -6,15 +6,13 @@
  *      Author: nirin
  */
 
-#ifndef BASEINDICATOR_H_
-#define BASEINDICATOR_H_
+#ifndef Base_Indicator_H_
+#define Base_Indicator_H_
 #include <vector>
 #include <iostream>
 
 using namespace std;
-
 const size_t kSMAPeriod = 7;
-
 
 class BaseIndicator {
 public:
@@ -23,4 +21,4 @@ public:
 	virtual vector<pair<string,double> > calculate(vector<pair<string,double> > data);
 };
 
-#endif /* BASEINDICATOR_H_ */
+#endif /* Base_Indicator_H_ */

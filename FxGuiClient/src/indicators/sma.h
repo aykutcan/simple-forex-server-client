@@ -6,8 +6,8 @@
  *      Author: nirin
  */
 
-#ifndef SMA_H_
-#define SMA_H_
+#ifndef Sma_H_
+#define Sma_H_
 #include "base_indicator.h"
 
 
@@ -18,4 +18,4 @@ public:
 	virtual vector<pair<string,double> > calculate(vector<pair<string,double> > data);
 };
 
-#endif /* SMA_H_ */
+#endif /* Sma_H_ */

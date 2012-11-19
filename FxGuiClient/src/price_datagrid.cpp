@@ -8,30 +8,20 @@
 
 #include "price_datagrid.h"
 #include "outgoing_request.h"
-#include <cstdlib>
-#include <iostream>
+#include <vector>
+#include <boost/smart_ptr.hpp>
+#include <gtkmm.h>
+#include <gdkmm.h>
 #include <gtkmm/drawingarea.h>
 #include <cairomm/context.h>
 #include <glib.h>
 #include <cairo.h>
-#include <gtkmm.h>
-#include <gdkmm.h>
 #include <glib.h>
 #include <sigc++.h>
 #include <signal.h>
-#include <vector>
-#include <boost/bind.hpp>
-#include <boost/smart_ptr.hpp>
-#include <boost/asio.hpp>
-#include <boost/thread.hpp>
-#include <vector>
-#include <boost/format.hpp>
-#include <boost/lexical_cast.hpp>
-#include <boost/algorithm/string.hpp>
 
 using namespace std;
 using namespace boost;
-using boost::asio::ip::tcp;
 
 
 PriceDataGrid::PriceDataGrid(int rows, int cols)
@@ -63,7 +53,6 @@ PriceDataGrid::PriceDataGrid(int rows, int cols)
 
 	for(size_t i=0; i<symbols.size(); i++){
 		string symbol = symbols.at(i).first  +"/"+ symbols.at(i).second;
-		cout << symbol << endl;
 		symbol_column.at(i) = new Gtk::Label();
 		rate_column.at(i) = new Gtk::Label();
 		change_column.at(i) = new Gtk::Label();

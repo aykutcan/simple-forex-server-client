@@ -6,8 +6,8 @@
  *      Author: nirin
  */
 
-#ifndef ACCOUNTDATUM_H_
-#define ACCOUNTDATUM_H_
+#ifndef Account_Datum_H_
+#define Account_Datum_H_
 
 #include <iostream>
 using namespace std;
@@ -23,4 +23,4 @@ public:
 };
 
 
-#endif /* FXACCOUNTDATUM_H_ */
+#endif /* Account_Datum_H_ */

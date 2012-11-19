@@ -12,7 +12,6 @@ using namespace std;
 
 BaseIndicator::BaseIndicator() {
 	// TODO Auto-generated constructor stub
-
 }
 
 BaseIndicator::~BaseIndicator() {

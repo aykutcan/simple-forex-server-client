@@ -8,14 +8,14 @@
 
 #include "history_graph.h"
 #include "indicators/base_indicator.h"
-#include "indicators/sma.h"
 #include "indicators/indicator_factory.h"
-#include <pangomm.h>
+#include "indicators/sma.h"
 #include <gtkmm.h>
 #include <glib.h>
 #include <sigc++.h>
 #include <signal.h>
 #include <cairomm/context.h>
+#include <pangomm.h>
 #include <boost/algorithm/string.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include <boost/lexical_cast.hpp>
@@ -103,7 +103,6 @@ vector<double> HistoryGraph::getTickValues(double min, double max, double tick_g
 	while(temp < max){
 		temp += tick_gap;
 		temp = ceil(temp/tick_gap)*tick_gap;
-		cout << temp << endl;
 		values.push_back(temp);
 	}
 	return values;
@@ -153,7 +152,6 @@ vector<string> HistoryGraph::markPeriodLabels(vector<string> dates, OutgoingRequ
 
 		if(j%set==0) {
 			filter_period_labels.push_back(period_labels.at(i));
-			cout << j << endl;
 		}
 		else filter_period_labels.push_back("");
 	}
@@ -190,8 +188,6 @@ void HistoryGraph::drawPeriodLabels(const Cairo::RefPtr<Cairo::Context>& cr, int
 	for(size_t i=0; i< data.size(); i++){
 		if(period_labels.at(i) == "") continue;
 		pair<string, int> point(period_labels.at(i), lexical_cast<double>(i)/period_labels.size()*W);
-		cout << "first : "<< point.first << endl;
-		//cout << "second : "<< point.second << endl;
 		cr->move_to(point.second, H/8);
 		cr->line_to(point.second, 3*H/4);
 		pango->set_text(point.first);
@@ -264,7 +260,6 @@ void HistoryGraph::drawHistory(vector<pair<string, double> > data
 	cr->stroke();
 }
 
-
 bool HistoryGraph::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 {
 	Gtk::Allocation allocation = get_allocation();
@@ -272,11 +267,8 @@ bool HistoryGraph::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	const int height = allocation.get_height();
 	const double right_offset = 50;
 
-	cout << "before history" << endl;
 	drawHistory(this->data, cr, width-right_offset, height);
-	cout << "before tick" << endl;
 	drawTicks(cr, width-right_offset, height);
-	cout << "before indicator" << endl;
 	drawIndicator(indicator_type, this->data, cr, width - right_offset, height);
 	drawPeriodLabels(cr, width - right_offset, height);
 

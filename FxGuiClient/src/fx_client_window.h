@@ -6,8 +6,8 @@
  *      Author: nirin
  */
 
-#ifndef FXCLIENTWINDOW_H_
-#define FXCLIENTWINDOW_H_
+#ifndef Fx_Client_Window_H_
+#define Fx_Client_Window_H_
 
 #include <gtkmm.h>
 #include "history_graph.h"
@@ -15,15 +15,12 @@
 #include "portfolio.h"
 
 using namespace std;
-//#define FX_SERVER "localhost"
-//#define PORT "8090"
 
 class FxClientWindow : public Gtk::Window
 {
 public:
   FxClientWindow();
   virtual ~FxClientWindow();
-//  enum { max_length = 1024*1024 };
 
 protected:
   //Signal handlers:
@@ -85,4 +82,4 @@ protected:
 
 
 
-#endif /* FXCLIENTWINDOW_H_ */
+#endif /* Fx_Client_Window_H_ */

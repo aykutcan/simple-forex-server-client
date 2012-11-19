@@ -6,20 +6,19 @@
  *      Author: nirin
  */
 
-#ifndef HISTORY_GRAPH_H_
-#define HISTORY_GRAPH_H_
+#ifndef History_Graph_H_
+#define History_Graph_H_
 
 #include "outgoing_request.h"
-#include <gtkmm/drawingarea.h>
-#include <cairomm/context.h>
-#include <glib.h>
-#include <cairo.h>
+#include <vector>
 #include <gtkmm.h>
 #include <gdkmm.h>
+#include <gtkmm/drawingarea.h>
+#include <cairomm/context.h>
+#include <cairo.h>
 #include <glib.h>
 #include <sigc++.h>
 #include <signal.h>
-#include <vector>
 
 using namespace std;
 
@@ -40,6 +39,7 @@ private:
 		string indicator_type;
 		double data_min;
 		double data_max;
+
 		vector<pair<string, double> > extractDataFromCSV(string csv);
 		void setMinMaxData(vector<pair<string, double> > data);
 		vector<int> transform2YCoordination(vector<double> data, int H);
@@ -66,4 +66,4 @@ private:
 		void drawPeriodLabels(const Cairo::RefPtr<Cairo::Context>& cr, int W, int H);
 };
 
-#endif /* HISTORY_GRAPH_H_ */
+#endif /* History_Graph_H_ */
